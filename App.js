@@ -6,6 +6,7 @@ import * as ImagePicker from 'expo-image-picker';
 function App() {
   // The path of the picked image
   const [pickedImagePath, setPickedImagePath] = useState('');
+  const [pic, setPic] = useState('');
 
   // This function is triggered when the "Select an image" button pressed
   const showImagePicker = async () => {
@@ -20,7 +21,7 @@ function App() {
     const result = await ImagePicker.launchImageLibraryAsync();
 
     // Explore the result
-    console.log(result);
+    console.log(result);git 
 
     if (!result.cancelled) {
       setPickedImagePath(result.uri);
